@@ -1,0 +1,8 @@
+{
+	"StudentDetails": {
+		"Student_Name": "Ravi",
+		"Student_Id": "123",
+		"StudentClass": "Senior"
+	}
+
+}
