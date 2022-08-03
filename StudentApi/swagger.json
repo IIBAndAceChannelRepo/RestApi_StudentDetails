@@ -1,0 +1,60 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "StudentApi",
+    "version" : "1.0.0",
+    "description" : "StudentApi"
+  },
+  "paths" : {
+    "/getStudentEligibility" : {
+      "post" : {
+        "operationId" : "postGetStudentEligibility",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "$ref" : "#/definitions/OutputDetail"
+            }
+          }
+        },
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "description" : "Insert a getStudentEligibility",
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "schema" : {
+            "$ref" : "#/definitions/StudentDetails"
+          },
+          "description" : "The request body for the operation",
+          "required" : true
+        } ]
+      }
+    }
+  },
+  "basePath" : "/studentapi/v1",
+  "definitions" : {
+    "StudentDetails" : {
+      "type" : "object",
+      "properties" : {
+        "Student_Name" : {
+          "type" : "string"
+        },
+        "Student_ID" : {
+          "type" : "string"
+        },
+        "StudentClass" : {
+          "type" : "string"
+        }
+      }
+    },
+    "OutputDetail" : {
+      "type" : "object",
+      "properties" : {
+        "ElibilityStatus" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
